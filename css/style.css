@@ -85,6 +85,7 @@ img {
     display: inline-block;
     margin-bottom: 2rem;
     width: 100%;
+    cursor: pointer;
 }
 
 @media (min-width: 600px) {
@@ -216,6 +217,64 @@ img {
     padding: 2rem 1rem 2rem 0;
 }
 
-.curso__label {}
+.curso__label {
+    font-weight: bold;
+}
 
-.curso__info {}
+.curso__info {
+    font-weight: lighter;
+}
+
+
+
+/* CONTACTO */
+
+.contacto-bg {
+    background-image: url(../img/contacto.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 30rem;
+}
+
+.formulario {
+    background-color: var(--blanco);
+    padding: 3rem;
+    margin: -3rem auto 0 auto;
+    width: 90%;
+    border: 1px solid rgba(197, 213, 220, 0.6);
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.campo__label {
+    flex-basis: 10rem;
+}
+
+.campo__field {
+    flex: 1;
+    border: 1px solid rgb(224, 232, 237);
+    padding: 1rem;
+}
+
+.campo__field:focus {
+    outline: none;
+    border-bottom: 2px solid var(--primario);
+}
+
+
+/* NOSOTROS */
+.sobre-nosotros {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+
+}
+
+@media (min-width: 600px) {
+    .sobre-nosotros {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
