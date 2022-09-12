@@ -45,19 +45,19 @@ h4 {
 }
 
 h1 {
-    font-size: 4.8rem;
+    font-size: 3rem;
 }
 
 h2 {
-    font-size: 4rem;
+    font-size: 2.6rem;
 }
 
 h3 {
-    font-size: 3.2rem;
+    font-size: 2.4rem;
 }
 
 h4 {
-    font-size: 2.8rem;
+    font-size: 2.2rem;
 }
 
 img {
@@ -77,6 +77,22 @@ img {
     text-align: center;
 }
 
+.boton {
+    background-color: var(--negro);
+    color: var(--blanco);
+    padding: 1.5rem;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+@media (min-width: 600px) {
+    .boton {
+        width: auto;
+    }
+}
+
 /* HEADER */
 .header {
     background-image: linear-gradient(to top, rgba(31, 19, 13, 0.833), rgba(26, 33, 44, 0.737)), url(../img/banner.webp);
@@ -88,9 +104,17 @@ img {
 
 .barra {
     display: flex;
+    flex-direction: column;
+    gap: 2rem;
     justify-content: space-between;
     align-items: center;
     padding: 2rem;
+}
+
+@media (min-width: 600px) {
+    .barra {
+        flex-direction: row;
+    }
 }
 
 .logo__nombre {
@@ -117,3 +141,81 @@ img {
     text-align: center;
     margin-top: 10rem;
 }
+
+/* CONTENIDO PRINCIPAL */
+
+@media (min-width: 600px) {
+    .contenido-principal {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 4rem;
+    }
+}
+
+
+.blog h3 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.sidebar h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.cursos {
+    list-style: none;
+}
+
+.widget-curso {
+    background-color: rgba(233, 237, 239, 0.272);
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.entrada {
+    background-color: rgb(239, 244, 246);
+    padding: 1.5rem;
+    margin: 1rem 0;
+    box-shadow: 1px 1px 8px rgb(186, 194, 205);
+    margin-bottom: 2rem;
+}
+
+.footer {
+    margin-top: 2rem;
+    background-color: var(--negro);
+}
+
+
+/** CURSOS **/
+.curso {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    background-color: #ebf0f2;
+    margin-bottom: 2rem;
+    box-shadow: 1px 1px 5px rgba(193, 206, 214, 0.735);
+}
+
+@media (min-width:600px) {
+    .curso {
+        grid-template-columns: 1fr 3fr;
+    }
+}
+
+.curso__imagen img {
+    display: block;
+}
+
+.curso__informacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 1rem 2rem 0;
+}
+
+.curso__label {}
+
+.curso__info {}
